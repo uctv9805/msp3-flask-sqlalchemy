@@ -11,4 +11,22 @@
     </div>
 </div>
 
+<ul class="collapsible">
+    {% for item in items|sort(attribute="sale_date") %}
+    <li>
+        <div class="collapsible-header white-text orange darken-2">
+            <i class="fas fa-caret-down"></i>
+            <strong>{{ item.item_name }}</strong> : {{ item.sale_date.strftime("%d %B, %Y") }}
+            {% if item.is_crossposted == True %}
+                <i class="fas fa-exclamation-circle orange-text text-lighten-2"></i>
+            {% endif %}
+        </div>
+        <div class="collapsible-body">
+            <strong>{{ item.category }}</strong>
+            <p>{{ item.item_description }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
 {% endblock %}

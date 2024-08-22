@@ -5,7 +5,8 @@ from itemsforsale.models import Category, Item
 
 @app.route("/")
 def home():
-    return render_template("items.html")
+    items = list(Item.query.order_by(Item.id).all())
+    return render_template("items.html", items=items)
 
 
 @app.route("/categories")
