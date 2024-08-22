@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="orange-text text-darken-4 center-align">Add Item</h3>
+
+<div class="row card-panel orange lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('add_item')}}">
+        <!-- item_name -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-solid fa-robot prefix orange-text text-darken-4"></i>
+                <input id="item_name" name="item_name" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
+                <label for="item_name">Item Name</label>
+            </div>
+        </div>
+        <!-- item_description -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix orange-text text-darken-4"></i>
+                <textarea id="item_description" name="item_description" minlength="5" maxlength="200" type="text"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="item_description">Item Description</label>
+            </div>
+        </div>
+        <!-- sale_date -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix orange-text text-darken-4"></i>
+                <input id="sale_date" name="sale_date" type="text" class=" datepicker validate"
+                    required>
+                <label for="sale_date">Sale Date</label>
+            </div>
+        </div>
+        <!-- is_crossposted -->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fas fa-exclamation-circle prefix orange-text text-darken-4"></i>
+                    <label for="is_crossposted">
+                        <input id="is_crossposted" name="is_crossposted" type="checkbox">
+                        <span class="lever"></span>
+                        Is Crossposted
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- category_id -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix orange-text text-darken-4"></i>
+                <select id="category_id" name="category_id" class="validate" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_id">Category</label>
+            </div>
+        </div>
+        <!-- Submit Button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large orange">
+                    Add Item <i class="fas fa-plus-square right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

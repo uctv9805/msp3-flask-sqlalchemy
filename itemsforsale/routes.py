@@ -40,3 +40,20 @@ def delete_category(category_id):
     db.session.delete(category)
     db.session.commit()
     return redirect(url_for("categories"))
+
+
+@app.route("/add_item", methods=["GET", "POST"])
+def add_item():
+    categories = list(Category.query.order_by(Category.category_name).all())
+    if request.method == "POST":
+        item = Item(
+            item_name=request.form.get("item_name"),
+            item_description=request.form.get("item_description"),
+            is_crossposted=bool(True if request.form.get("is_crossposted") else False),
+            sale_date=request.form.get("sale_date"),
+            category_id=request.form.get("category_id")
+        )
+        db.session.add(item)
+        db.session.commit()
+        return redirect(url_for("home"))
+    return render_template("add_item.html", categories=categories)
