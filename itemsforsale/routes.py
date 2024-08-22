@@ -58,3 +58,17 @@ def add_item():
         db.session.commit()
         return redirect(url_for("home"))
     return render_template("add_item.html", categories=categories)
+
+
+@app.route("/edit_item/<int:item_id>", methods=["GET", "POST"])
+def edit_item(item_id):
+    item = Item.query.get_or_404(item_id)
+    categories = list(Category.query.order_by(Category.category_name).all())
+    if request.method == "POST":
+        item.item_name = request.form.get("item_name")
+        item.item_description = request.form.get("item_description")
+        item.is_crossposted = bool(True if request.form.get("is_crossposted") else False)
+        item.sale_date = request.form.get("sale_date")
+        item.category_id = request.form.get("category_id")
+        db.session.commit()
+    return render_template("edit_item.html", item=item, categories=categories)
