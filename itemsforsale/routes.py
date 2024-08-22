@@ -5,4 +5,4 @@ from itemsforsale.models import Category, Item
 
 @app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("items.html")
