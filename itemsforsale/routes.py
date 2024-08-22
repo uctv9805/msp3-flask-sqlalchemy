@@ -72,3 +72,11 @@ def edit_item(item_id):
         item.category_id = request.form.get("category_id")
         db.session.commit()
     return render_template("edit_item.html", item=item, categories=categories)
+
+
+@app.route("/delete_item/<int:item_id>")
+def delete_item(item_id):
+    item = Item.query.get_or_404(item_id)
+    db.session.delete(item)
+    db.session.commit()
+    return redirect(url_for("home"))
