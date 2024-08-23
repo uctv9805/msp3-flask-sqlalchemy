@@ -6,39 +6,45 @@ It was designed with fellow Toy enthusiasts in mind who can benefit from keeping
 
 This site is targeted towards anyone who is a toy/game enthusiast and wants to keep track of there ever growing collection - It initially started as a way for our facebook group to showcase items for sale and could still grow to this in the future, I want to let the community decide what features are added and how it will evolve. 
 
+Initially this site will be used by myself and fellow group members who have surplus stock that will be used in group giveaways/competitions/live events. It will develop further in time as authentication steps are added. 
+
 You can visit my live site [from here](https://toys-team-toy-inventory-80ed09c090ba.herokuapp.com/)
 
-![shows website working across mulitple devices](/static/assets/docs/screenshots/responsiveness.png)
+My site is fully responsive and works across muliptle devices, I have tested this using [AmIResponsive](https://ui.dev/amiresponsive?url=https://toys-team-toy-inventory-80ed09c090ba.herokuapp.com/)
 
 ## Planning Stage
 
 ### Target Audiences:
 
-- Anyone who likes playing fun games. 
-- All age groups down to at least 5 years old due to simple nature of game (as tested by my 5 year old).
-- Followers of the artist who appreciate his work.
+- Anyone who is a fellow Toy enthusiast.
+- Age 16 and over purely due to the fact it will be used with members of a Facebook group and they have age limitations.
+- Anyone wanting to catalogue their Toys - Initially it will be known members who want to catalogue their surplus stock along with mine for our group sales/competitons/giveaways. 
 
 ### User Stories:
 
-- As a user, I want to play a fun game.
-- As a user, I want to be able to check my score.
-- As a user, I want to know how fast I was when completing the game.
-- As a user, I want to know when I have won the game.
+- As a user, I want to keep track of my toy purchases.
+- As a user, I want to be able to categorise my items. 
+- As a user, I want to be able to add descriptions and a date when I bought the item. 
+- As a user, I want to be able to illustrate whether or not the item is crossposted for sale on other platforms. 
+- As a user, I want to be able to edit items, and delete them from the database if they are sold/given away.
+- As a user, I want to be able to organise in sale date order. 
+- As a user, I want to be able to add new categories as and when required, when I start buying a new toy line. 
+- As a user, I want to be able to edit and delete categories as my collection grows/changes. 
 
 ### Site Aims:
 
-- To provide the user with a fun, visually pleasing game to play.
-- To make the game interactive and satisfying to play.
-- To encourage players to play again by showing scores and times so they can attempt to beat the previous score. 
-- To show the user some of the artists artwork.
+- To provide the user with a simple, clean, easy to use toy cataloging app.
+- To make it easy to add categories and then new items to the category. 
+- Offer an easy to read system to keep track of items in purchase date order. 
+- To be able to easily edit and delete entries as and when required. 
 
 ### How this is achieved:
 
-- A simple memory game was created which is fun to play as the timer and score function offer replayability as it creates a desire to play again. The colours and layout have been thought about to make the site nice to look at. 
+- Simple, readable buttons offering the ability to add category and add item, these each have there own page reachable by using a nice, clean navbar.
 
-- The buttons and cards in the game are clickable and have animations/transitions added so the game feels responsive and satisfying to play.
+- The edit and delete item buttons are easily readable and colour coded for good user experience. 
 
-- Some of the artists artwork has been added to the background so it is inkeeping with their visual style and a link to their website has been added. 
+- The add item page is a nice, readable form for users to add each section and detail required, as well as date purchased and then opportunity to add to a category.  
 
 
 ## Wireframes
@@ -49,55 +55,39 @@ The design has stayed mostly the same as the wireframes throughout this project,
 
 ## Color profile
 
-I wanted to create something which was aesthectically pleasing with complimentary colours so I spent time choosing interesting colours and built a nice color palette around it. There is a nice contrast between the blues and the maroon which works well but also seperates the background and game board from the cards and buttons so it is clear to understand where to click to initiate and play the game. 
-
-![Color palette](assets/docs/screenshots/color-palette.png)
+I wanted to create something which was aesthectically pleasing with simple colours to keep the clean, organised feel to the project. The simple orange palette used is fun and works nicely with the playful nature of the toys aspect - I used one of the color palettes within the Materialize framework and kept it consistent througout the site. 
 
 ## Features
 
-### Title
+### Navbar
 
--  Encourages the user to 'find' due to the wording and the magnifying glass so it gives a subtle explanation of an otherwise self explanatory game. It also shows the game was designed by the artist.
+- I used the Materilaize framework and implemented their navbar which I changed the html to make it work for my site - I used this throughout the site for good UX and I also implemented the side nav element for responsiveness on smaller devices.
 
-![A Title](assets/docs/screenshots/title.png)
+### Homepage
 
-### Background Images
+- The homepage is a simple, clean, easy to read site that offers the user an instant look at the current inventory. These are all available to acces using Materialize collapsibles - it shows the user the title and date and then when clicked shows the full detail of the item. I wanted this information to be viewable on the first page as it is the main purpose of the site - to track items. There is an option to add further items straight away at the top of the site. The information is complemented by a simple navbar and the sticky footer at the bottom shows who designed it and a link to my instagram page. 
 
-- I intend to make the game a part of my artists website so wanted some of the art encorporated into the background, I do intend to change the cards so that they have artwork on it in the future but for now the background is where you can find the work. 
+### New Item
 
-![A number of different orignal character illustrations](assets/docs/screenshots/images-1.png)
-![A number of different orignal character illustrations](assets/docs/screenshots/images-2.png)
+- New item takes you straight to a form to add a new item. The form is simple and clean and has icons to illustrate the purpose of each section as well as wording. Again using a Materilaize form and editing it so that it suits the need for the user. The form elements are required so that it cannot be submitted without each section being filled out keeping the website consistent. The navbar and footer are consistent again with the homepage, this will continue throughout the site. 
 
-### Scores
+### Categories
 
-- There is a move counter and a timer to make the game more interesting, giving the user incentive to play again and beat there score. 
-
-![Score Card](assets/docs/screenshots/score.png)
-
-### The Game
-
-- The game board is front and centre so the user can start playing as soon as the game loads. A 16 sqaure grid creates the pairs game and as the cards are clicked they are animated and turn to reveal an emoji. I want to put my own artwork as the image at some point in the future. 
-
-- Once the game is complete the whole board turns to reveal the score and time it took, and explanation to refresh the browser to play again. There is a link to the artists website. 
-
-![Image of a game board front](assets/docs/screenshots/game-1.png)
-![Image of a game board during](assets/docs/screenshots/game-2.png)
-![Image of a game board - win](assets/docs/screenshots/win-screen.png)
+- Categories allows the user to add a new category as and when new lines/toys are introduced to their collection - so that the items can be categorized to help organize them. These are set up in such a way that if edited it will edit through to the item in the category - and if they are deleted it will delete all items within the category.  
 
 ## The Footer
 
-The footer simply offers a copyright notation and another link to the artists website. 
-
-![Image of text and link from a footer](assets/docs/screenshots/footer.png)
+The footer simply offers a copyright notation and a link to my instagram page for contact purposes. 
 
 ## Features Left to Implement
 
-### Restart button
-- I want to add a restart button so that when the game ends the user doesn't have to refresh the browser.
+### Authentication
 
-- I wan the imagery on the cards to be my original artwork instead of the emojis.
+- I want to add authentication to the site so that only people who are given access to the site can edit or delete items, currently it does not have this so it gives those who know about it free roam to control the site. 
 
-- I would maybe like to incorporate the entire page into my website as another fun way to showcase some of my art, it may work as a standalone and offer another way to visit the site as it stands but this is something I will consider - The colors would need to be changed to fit the theme of the website though. 
+### Modals
+
+- I also want to add a system that produes a modal when a user tries to delete an item or a category - Something that explains - Are you sure you want to delete this item? Yes, No. And - Are you sure you want to delete this category, all items within this category will also be deleted - this cannot be undone - Yes, cancel. 
 
 # Testing
 
@@ -105,14 +95,23 @@ I have created a separate document for the testing section with everything cover
 
 # Deployment
 
-I deployed the page on GitHub pages using the following steps:
+I deployed the app on Heroku using the following steps:
 
-1. Within the project's repository, navigate to the Settings tab.
-2. In the menu on the left-hand side, select the Pages tab.
-3. In the Source section, select Main branch from the drop-down menu then click Save.
-4. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link.
+1. Log in to Heroku and click New, then create new app. 
+2. Choose a name and region then click create app.  
+3. Go to the settings tab and click reveal config vars.
+4. Add a cofig var using the database URL from your PostgreSQL from Code Institute.
+5. Add each of my other environment variables as a Config Var. 
+6. Navigate to the deploy tab of the app.
+7. In the deployment method section, click 'connect to GitHub', find my repo and then connect.
+8. Using the manual deploy section, click deploy branch.
+9. With the project in place, the tables need adding to the database. 
+10. Click 'more' then run database.
+11. Type Python3 into the console to run.
+12. Run from taskmanager import db, then, db.create_all(), then exit() the terminal.
+13. My app was up and running, I clicked Open App - and it opened in a new browser successfully.
 
-    Click here to be directed to the live site [Find My Designs](https://uctv9805.github.io/msp-2-memory/)
+    Click here to be directed to the live site [Toys Team - Toy Inventory](https://toys-team-toy-inventory-80ed09c090ba.herokuapp.com/)
 
 # Credits
 
@@ -128,12 +127,4 @@ Here is a list of people and resources I turned to throughout the project for su
 
 - All content for the site was written by myself.
 
-- The magnifying glass icon and the copyright icon were from Font Awesome [Font Awesome](https://fontawesome.com/)
-
-- Color palette was generated by coolors.co [coolors.co] (https://coolors.co/)
-
-### Media
-
-As the actual aforementioned artist, I created all of the media used throughout the website myself.
-
-- All illustrations were drawn by me, Ashley Marshall - This includes the background images.
+- The icons used throughout the site were from Font Awesome [Font Awesome](https://fontawesome.com/)
