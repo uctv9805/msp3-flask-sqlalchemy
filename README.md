@@ -1,131 +1,139 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Toys Team - Toy Inventory
 
-Welcome Ash Marshall,
+As a budding toy collector I struggle to keep track of purchases, when and where I bought them, what they came with etc...etc. If this sounds like you then my simple Toy inventory tool will help you manage your inventory and keep track of when you bought an item so you can then track the value in the future. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+It was designed with fellow Toy enthusiasts in mind who can benefit from keeping track of what they buy, as we all know sometimes we get carried away.  
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+This site is targeted towards anyone who is a toy/game enthusiast and wants to keep track of there ever growing collection - It initially started as a way for our facebook group to showcase items for sale and could still grow to this in the future, I want to let the community decide what features are added and how it will evolve. 
 
-## Gitpod Reminders
+You can visit my live site [from here](https://toys-team-toy-inventory-80ed09c090ba.herokuapp.com/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![shows website working across mulitple devices](/static/assets/docs/screenshots/responsiveness.png)
 
-`python3 -m http.server`
+## Planning Stage
 
-A blue button should appear to click: _Make Public_,
+### Target Audiences:
 
-Another blue button should appear to click: _Open Browser_.
+- Anyone who likes playing fun games. 
+- All age groups down to at least 5 years old due to simple nature of game (as tested by my 5 year old).
+- Followers of the artist who appreciate his work.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### User Stories:
 
-A blue button should appear to click: _Make Public_,
+- As a user, I want to play a fun game.
+- As a user, I want to be able to check my score.
+- As a user, I want to know how fast I was when completing the game.
+- As a user, I want to know when I have won the game.
 
-Another blue button should appear to click: _Open Browser_.
+### Site Aims:
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- To provide the user with a fun, visually pleasing game to play.
+- To make the game interactive and satisfying to play.
+- To encourage players to play again by showing scores and times so they can attempt to beat the previous score. 
+- To show the user some of the artists artwork.
 
-To log into the Heroku toolbelt CLI:
+### How this is achieved:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- A simple memory game was created which is fun to play as the timer and score function offer replayability as it creates a desire to play again. The colours and layout have been thought about to make the site nice to look at. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+- The buttons and cards in the game are clickable and have animations/transitions added so the game feels responsive and satisfying to play.
 
-### Connecting your Mongo database
+- Some of the artists artwork has been added to the background so it is inkeeping with their visual style and a link to their website has been added. 
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
 
-------
+## Wireframes
 
-## Release History
+I created wireframes using Balsamiq to properly plan my project and get a good idea of the layout and how to use the available space. Below are the links to the wireframes which includes layouts for desktop, mobile and tablet versions of the site.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The design has stayed mostly the same as the wireframes throughout this project, simplicity was key for me so apart from visual styling the overall layout from the wireframe was acheived in the final project.
 
-**June 18, 2024,** Add Mongo back into template
+## Color profile
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+I wanted to create something which was aesthectically pleasing with complimentary colours so I spent time choosing interesting colours and built a nice color palette around it. There is a nice contrast between the blues and the maroon which works well but also seperates the background and game board from the cards and buttons so it is clear to understand where to click to initiate and play the game. 
 
-**May 28 2024:** Fix Mongo and Links installs
+![Color palette](assets/docs/screenshots/color-palette.png)
 
-**April 26 2024:** Update node version to 16
+## Features
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Title
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+-  Encourages the user to 'find' due to the wording and the magnifying glass so it gives a subtle explanation of an otherwise self explanatory game. It also shows the game was designed by the artist.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![A Title](assets/docs/screenshots/title.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Background Images
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- I intend to make the game a part of my artists website so wanted some of the art encorporated into the background, I do intend to change the cards so that they have artwork on it in the future but for now the background is where you can find the work. 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![A number of different orignal character illustrations](assets/docs/screenshots/images-1.png)
+![A number of different orignal character illustrations](assets/docs/screenshots/images-2.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Scores
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- There is a move counter and a timer to make the game more interesting, giving the user incentive to play again and beat there score. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Score Card](assets/docs/screenshots/score.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### The Game
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- The game board is front and centre so the user can start playing as soon as the game loads. A 16 sqaure grid creates the pairs game and as the cards are clicked they are animated and turn to reveal an emoji. I want to put my own artwork as the image at some point in the future. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- Once the game is complete the whole board turns to reveal the score and time it took, and explanation to refresh the browser to play again. There is a link to the artists website. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Image of a game board front](assets/docs/screenshots/game-1.png)
+![Image of a game board during](assets/docs/screenshots/game-2.png)
+![Image of a game board - win](assets/docs/screenshots/win-screen.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## The Footer
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The footer simply offers a copyright notation and another link to the artists website. 
 
-------
+![Image of text and link from a footer](assets/docs/screenshots/footer.png)
 
-## FAQ about the uptime script
+## Features Left to Implement
 
-**Why have you added this script?**
+### Restart button
+- I want to add a restart button so that when the game ends the user doesn't have to refresh the browser.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- I wan the imagery on the cards to be my original artwork instead of the emojis.
 
-**How will this affect me?**
+- I would maybe like to incorporate the entire page into my website as another fun way to showcase some of my art, it may work as a standalone and offer another way to visit the site as it stands but this is something I will consider - The colors would need to be changed to fit the theme of the website though. 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+# Testing
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+I have created a separate document for the testing section with everything covered - [TESTING.md](TESTING.md)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+# Deployment
 
-**So….?**
+I deployed the page on GitHub pages using the following steps:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+1. Within the project's repository, navigate to the Settings tab.
+2. In the menu on the left-hand side, select the Pages tab.
+3. In the Source section, select Main branch from the drop-down menu then click Save.
+4. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link.
 
-**Can I opt out?**
+    Click here to be directed to the live site [Find My Designs](https://uctv9805.github.io/msp-2-memory/)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+# Credits
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+Here is a list of people and resources I turned to throughout the project for support, without which I would not have succeeded.
 
-**Anything more?**
+### General
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Code Institute - My design took inspiration from a number of code-along projects that have been taught on the course so far, however I have adapted and created my own code so as not to simply copy and paste the ideas.
 
----
+- W3Schools has been invaluable in helping me with ideas for code and problem solving issues when they arose. 
 
-Happy coding!
+### Content
+
+- All content for the site was written by myself.
+
+- The magnifying glass icon and the copyright icon were from Font Awesome [Font Awesome](https://fontawesome.com/)
+
+- Color palette was generated by coolors.co [coolors.co] (https://coolors.co/)
+
+### Media
+
+As the actual aforementioned artist, I created all of the media used throughout the website myself.
+
+- All illustrations were drawn by me, Ashley Marshall - This includes the background images.
